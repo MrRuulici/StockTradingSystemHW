@@ -1,0 +1,21 @@
+Singleton (StockManagement, TradingSystem, UserAccountManagement):
+- Pentru asigurarea unei singure instante
+
+Factory Method (TradingStrategy):
+- Defineste o interfata pentru crearea unui obiect, lasand restul fie facute de subclase.
+- DayTradingStrategy si LongTermInvestingStrategy sunt cele 2 clase care implementeaza aceasta interfata
+
+Strategy (TradingSystem, TradingStrategy):
+- Permite clientului sa aleaga algoritmul potrivit in timpul executiei
+- TradingSystem utilizează diferite strategii de tranzacționare (TradingStrategy) care pot fi usor schimbate sau extinse fara a modifica logica de baza a sistemului de tranzacționare
+
+Observer (User, Portfolio):
+- Atunci cand un obiect isi schimba starea, toti cei legati de el sunt notificati si actualizati automat
+- User si Portfolio actioneaza ca observatori
+
+Composite (TransactionHistory, Portfolio):
+- Compune obiectele in "tree structures", in acest caz TransactionHistory si Portfolio
+
+Command Pattern (TradingSystem, TradeCommand):
+- Incapsuleaza un request intr-un obiect
+- Folosit pentru a gestiona diferitele tipuri de tradeuri  
